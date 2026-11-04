@@ -1,0 +1,669 @@
+## Error Type
+Console Error
+
+## Error Message
+A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <InnerLayoutRouter url="/" tree={[...]} cacheNode={{lazyData:null, ...}} segmentPath={[...]}>
+          <SegmentViewNode type="page" pagePath="page.tsx">
+            <SegmentTrieNode>
+            <HomePage>
+              <script>
+              <HomePage>
+                <PortfolioExperience>
+                  <SmoothScrollProvider>
+                    <div ref={{current:null}} className="relative m...">
+                      <a>
+                      <CustomCursor>
+                      <CommandPaletteModal>
+                      <TopNav activeChapterId="intro">
+                        <header ref={{current:null}} className="fixed top-...">
+                          <div>
+                          <div className="mx-auto fl...">
+                            <a>
+                            <nav>
+                            <div className="flex items...">
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                className="h-9 px-4 text-xs font-semibold text-white bg-[#2563EB] hover:bg-[#1D4ED8] r..."
+-                               fdprocessedid="kq94n4"
+                              >
++                               Contact Me
+                      <ChapterRail>
+                      <main>
+                        <HeroChapter onOpenCommandPalette={function onOpenCommandPalette}>
+                          <section id="intro" ref={{current:null}} aria-label="Chapter 01..." className="relative m...">
+                            <div>
+                            <div ref={{current:null}} className="relative z...">
+                              <div className="grid grid-...">
+                                <div className="lg:col-spa...">
+                                  <div className="hero-kicke...">
+                                    <span>
+                                    <span>
+                                    <span>
+                                    <span>
+                                    <button
+                                      type="button"
+                                      onMouseEnter={function triggerRoleDecode}
+                                      onClick={function triggerRoleDecode}
+                                      data-cursor="Decode"
+                                      className="font-[family-name:var(--font-mono)] text-xs sm:text-sm text-zinc-300 ..."
+-                                     fdprocessedid="12nu0e"
+                                    >
++                                     Junior Front-end Developer
+                                  <h1>
+                                  <p>
+                                  <div className="hero-cta-g...">
+                                    <MagneticWrap strength={0.32}>
+                                      <div ref={{current:null}} className="inline-blo...">
+                                        <button
+                                          type="button"
+                                          data-cursor="Explore"
+                                          onClick={function onClick}
+                                          className="h-11 px-6 bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-sm font..."
+-                                         fdprocessedid="vpzt9l"
+                                        >
+                                    <MagneticWrap strength={0.26}>
+                                      <div ref={{current:null}} className="inline-blo...">
+                                        <button
+                                          type="button"
+                                          data-cursor="Say Hi"
+                                          onClick={function onClick}
+                                          className="h-11 px-6 bg-[#111114] hover:bg-zinc-800/80 text-[#F4F4F5] border..."
+-                                         fdprocessedid="hyrv0ch"
+                                        >
+                                ...
+                                  <div>
+                                    <div className="flex items...">
+                                      <span>
+                                      <button
+                                        type="button"
+                                        onClick={function onOpenCommandPalette}
+                                        data-cursor="Search"
+                                        className="h-7 px-2.5 rounded border border-zinc-800 bg-[#14141B] hover:border..."
+-                                       fdprocessedid="uv4nc"
+                                      >
+                                    <ol className="divide-y d...">
+                                      <li>
+                                        <button
+                                          type="button"
+                                          onMouseEnter={function onMouseEnter}
+                                          onFocus={function onFocus}
+                                          onClick={function onClick}
+                                          data-cursor="Ch.01"
+                                          className="w-full py-2.5 flex items-center justify-between gap-4 text-left g..."
+-                                         fdprocessedid="kddqy"
+                                        >
+                                      <li>
+                                        <button
+                                          type="button"
+                                          onMouseEnter={function onMouseEnter}
+                                          onFocus={function onFocus}
+                                          onClick={function onClick}
+                                          data-cursor="Ch.02"
+                                          className="w-full py-2.5 flex items-center justify-between gap-4 text-left g..."
+-                                         fdprocessedid="5eovsz"
+                                        >
+                                      <li>
+                                        <button
+                                          type="button"
+                                          onMouseEnter={function onMouseEnter}
+                                          onFocus={function onFocus}
+                                          onClick={function onClick}
+                                          data-cursor="Ch.03"
+                                          className="w-full py-2.5 flex items-center justify-between gap-4 text-left g..."
+-                                         fdprocessedid="ap7x1"
+                                        >
+                                      <li>
+                                        <button
+                                          type="button"
+                                          onMouseEnter={function onMouseEnter}
+                                          onFocus={function onFocus}
+                                          onClick={function onClick}
+                                          data-cursor="Ch.04"
+                                          className="w-full py-2.5 flex items-center justify-between gap-4 text-left g..."
+-                                         fdprocessedid="getqhy"
+                                        >
+                                      <li>
+                                        <button
+                                          type="button"
+                                          onMouseEnter={function onMouseEnter}
+                                          onFocus={function onFocus}
+                                          onClick={function onClick}
+                                          data-cursor="Ch.05"
+                                          className="w-full py-2.5 flex items-center justify-between gap-4 text-left g..."
+-                                         fdprocessedid="p4ns7g"
+                                        >
+                                      <li>
+                                        <button
+                                          type="button"
+                                          onMouseEnter={function onMouseEnter}
+                                          onFocus={function onFocus}
+                                          onClick={function onClick}
+                                          data-cursor="Ch.06"
+                                          className="w-full py-2.5 flex items-center justify-between gap-4 text-left g..."
+-                                         fdprocessedid="8jrj6j"
+                                        >
+                                  ...
+                            <div className="relative z...">
+                              <div className="flex flex-...">
+                                <div>
+                                <button
+                                  type="button"
+                                  data-cursor="Scroll"
+                                  onClick={function onClick}
+                                  className="inline-flex items-center gap-2 text-zinc-400 hover:text-[#F4F4F5] transit..."
+-                                 fdprocessedid="nie4t"
+                                >
+                        <SectionTransitionRibbon>
+                        ...
+                          <div className="mt-14 lg:m...">
+                            <div className="lg:col-spa...">
+                              <ThreePortraitStage portraitSrc="/assets/ai..." developerName="[Your Full..." ...>
+                                <div className="relative a...">
+                                  <div>
+                                  <div>
+                                  <div>
+                                  <div className="absolute b...">
+                                    <button
+                                      type="button"
+                                      onClick={function onClick}
+                                      className="h-6 px-2.5 rounded-t-md border border-b-0 border-zinc-800 bg-[#0E0E14..."
+-                                     fdprocessedid="9oyu4d"
+                                    >
+                                    <div className="w-full rou...">
+                                      <div className="flex items...">
+                                        <div className="flex items...">
+                                          <button
+                                            type="button"
+                                            onClick={function onClick}
+                                            className="h-7 px-2.5 rounded text-[11px] font-medium transition-colors cu..."
+-                                           fdprocessedid="7xa67d"
+                                          >
++                                           Studio Cutout
+                                          <button
+                                            type="button"
+                                            onClick={function onClick}
+                                            className="h-7 px-2.5 rounded text-[11px] font-medium transition-colors cu..."
+-                                           fdprocessedid="yj4gb9"
+                                          >
++                                           Mono Relief
+                                          <button
+                                            type="button"
+                                            onClick={function onClick}
+                                            className="h-7 px-2.5 rounded text-[11px] font-medium transition-colors cu..."
+-                                           fdprocessedid="w58m2"
+                                          >
++                                           Original
+                                        <button
+                                          type="button"
+                                          onClick={function handleResetView}
+                                          aria-label="Reset 3D camera angle"
+                                          className="h-7 px-2 rounded border border-zinc-800 bg-[#15151D] hover:border..."
+-                                         fdprocessedid="egpod9"
+                                        >
+                                      ...
+                            <div className="lg:col-spa...">
+                              <div className="flex flex-...">
+                                <div>
+                                <div className="flex flex-...">
+                                  <button
+                                    type="button"
+                                    onClick={function onClick}
+                                    className="h-7 px-2.5 rounded text-xs font-[family-name:var(--font-mono)] tabular-..."
+-                                   fdprocessedid="5qys5"
+                                  >
+                                  <button
+                                    type="button"
+                                    onClick={function onClick}
+                                    className="h-7 px-2.5 rounded text-xs font-[family-name:var(--font-mono)] tabular-..."
+-                                   fdprocessedid="sf16d"
+                                  >
+                                  <button
+                                    type="button"
+                                    onClick={function onClick}
+                                    className="h-7 px-2.5 rounded text-xs font-[family-name:var(--font-mono)] tabular-..."
+-                                   fdprocessedid="zjlv1k"
+                                  >
+                                  <button
+                                    type="button"
+                                    onClick={function onClick}
+                                    className="h-7 px-2.5 rounded text-xs font-[family-name:var(--font-mono)] tabular-..."
+-                                   fdprocessedid="ijz9r"
+                                  >
+                              ...
+                        <TechStackChapter selectedTechId="typescript" onSelectTechId={function bound dispatchSetState}>
+                          <section id="stack" ref={{current:null}} aria-label="Chapter 03..." className="relative p...">
+                            <div className="mx-auto ma...">
+                              <ChapterHeader>
+                              <div className="mt-10 flex...">
+                                <div role="tablist" aria-label="Filter tec..." className="flex flex-...">
+                                  <button
+                                    role="tab"
+                                    type="button"
+                                    aria-selected={true}
+                                    onClick={function onClick}
+                                    className="h-8 px-3.5 rounded-md text-xs font-medium transition-colors duration-15..."
+-                                   fdprocessedid="4mxkqf"
+                                  >
++                                   All Technologies
+                                  <button
+                                    role="tab"
+                                    type="button"
+                                    aria-selected={false}
+                                    onClick={function onClick}
+                                    className="h-8 px-3.5 rounded-md text-xs font-medium transition-colors duration-15..."
+-                                   fdprocessedid="934s7q"
+                                  >
++                                   {"Core Languages & Styling"}
+                                  <button
+                                    role="tab"
+                                    type="button"
+                                    aria-selected={false}
+                                    onClick={function onClick}
+                                    className="h-8 px-3.5 rounded-md text-xs font-medium transition-colors duration-15..."
+-                                   fdprocessedid="91uxig"
+                                  >
++                                   Front-end Frameworks
+                                  <button
+                                    role="tab"
+                                    type="button"
+                                    aria-selected={false}
+                                    onClick={function onClick}
+                                    className="h-8 px-3.5 rounded-md text-xs font-medium transition-colors duration-15..."
+-                                   fdprocessedid="uhj9iw"
+                                  >
++                                   {"Reactive & State"}
+                                  <button
+                                    role="tab"
+                                    type="button"
+                                    aria-selected={false}
+                                    onClick={function onClick}
+                                    className="h-8 px-3.5 rounded-md text-xs font-medium transition-colors duration-15..."
+-                                   fdprocessedid="vsm9sb"
+                                  >
++                                   {"Backend & Database"}
+                                  <button
+                                    role="tab"
+                                    type="button"
+                                    aria-selected={false}
+                                    onClick={function onClick}
+                                    className="h-8 px-3.5 rounded-md text-xs font-medium transition-colors duration-15..."
+-                                   fdprocessedid="u8dzz"
+                                  >
++                                   {"Workflow & DevOps"}
+                                <div className="flex flex-...">
+                                  <span>
+                                  <button
+                                    type="button"
+                                    onClick={function onClick}
+                                    data-cursor="Combine"
+                                    className="h-8 px-3 rounded-md border text-xs font-medium transition-colors durati..."
+-                                   fdprocessedid="1lenu9"
+                                  >
++                                   Angular Reactive SPA
+                                  <button
+                                    type="button"
+                                    onClick={function onClick}
+                                    data-cursor="Combine"
+                                    className="h-8 px-3 rounded-md border text-xs font-medium transition-colors durati..."
+-                                   fdprocessedid="d05mcr"
+                                  >
++                                   Modern React Client
+                                  <button
+                                    type="button"
+                                    onClick={function onClick}
+                                    data-cursor="Combine"
+                                    className="h-8 px-3 rounded-md border text-xs font-medium transition-colors durati..."
+-                                   fdprocessedid="49d2iu"
+                                  >
++                                   {"Full-Stack & Docker"}
+                              ...
+                                <div style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                                  <div>
+                                  <h3>
+                                  <p>
+                                  <div>
+                                  <div className="mt-6 pt-5 ...">
+                                    <div className="flex items...">
+                                      <span>
+                                      <button
+                                        type="button"
+                                        onClick={function runPipelineSimulation}
+                                        data-cursor="Run"
+                                        className="h-7 px-2.5 rounded bg-[#2563EB] hover:bg-[#1D4ED8] text-[11px] font..."
+-                                       fdprocessedid="h76ei"
+                                      >
+                                    ...
+                        <SectionTransitionRibbon>
+                        ...
+                          <div className="lg:hidden ...">
+                            <article className="project-mo...">
+                              <div className="project-ar...">
+                                <ThreeProjectShowcase variant="reactive-w..." projectIndex="01" techStack={[...]} ...>
+                                  <div onClick={function onClick} className="relative h...">
+                                    <div>
+                                    <div>
+                                    <button
+                                      type="button"
+                                      onClick={function onClick}
+                                      aria-label="Open full project details modal"
+                                      className="absolute top-3.5 right-3.5 z-10 h-7 px-2.5 rounded-md border border-z..."
+-                                     fdprocessedid="3s5my"
+                                    >
+                                    <div className="absolute b...">
+                                      <button
+                                        type="button"
+                                        onClick={function onClick}
+                                        className="h-5 px-2.5 rounded-t border border-b-0 border-zinc-800 bg-[#0E0E14]..."
+-                                       fdprocessedid="sg50ms"
+                                      >
+                                      <div className="flex items...">
+                                        <button
+                                          type="button"
+                                          onClick={function toggleExplode}
+                                          className="h-7 px-2.5 rounded text-[11px] font-medium inline-flex items-cent..."
+-                                         fdprocessedid="5b0ff"
+                                        >
+                                        <button
+                                          type="button"
+                                          onClick={function triggerInteractivePulse}
+                                          className="h-7 px-2.5 rounded bg-[#15151E] hover:bg-zinc-800 text-[11px] fon..."
+-                                         fdprocessedid="eafgr"
+                                        >
+                                        <button
+                                          type="button"
+                                          onClick={function toggleCameraPreset}
+                                          className="h-7 px-2.5 rounded bg-[#15151E] hover:bg-zinc-800 text-[11px] fon..."
+-                                         fdprocessedid="7bvjh"
+                                        >
+                              <div>
+                              <h3>
+                              <p>
+                              <div>
+                              <div className="mt-7 flex ...">
+                                <MagneticWrap strength={0.25}>
+                                  <div ref={{current:null}} className="inline-blo...">
+                                    <button
+                                      type="button"
+                                      data-cursor="Demo"
+                                      onClick={function onClick}
+                                      className="h-10 px-5 rounded-md bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-..."
+-                                     fdprocessedid="aucv3s"
+                                    >
+                                <MagneticWrap strength={0.22}>
+                                  <div ref={{current:null}} className="inline-blo...">
+                                    <button
+                                      type="button"
+                                      data-cursor="Code"
+                                      onClick={function onClick}
+                                      className="h-10 px-5 rounded-md border border-zinc-800 bg-[#121217] hover:bg-zin..."
+-                                     fdprocessedid="b18mne"
+                                    >
+                            <article className="project-mo...">
+                              <div className="project-ar...">
+                                <ThreeProjectShowcase variant="modular-co..." projectIndex="02" techStack={[...]} ...>
+                                  <div onClick={function onClick} className="relative h...">
+                                    <div>
+                                    <div>
+                                    <button
+                                      type="button"
+                                      onClick={function onClick}
+                                      aria-label="Open full project details modal"
+                                      className="absolute top-3.5 right-3.5 z-10 h-7 px-2.5 rounded-md border border-z..."
+-                                     fdprocessedid="s4izgw"
+                                    >
+                                    <div className="absolute b...">
+                                      <button
+                                        type="button"
+                                        onClick={function onClick}
+                                        className="h-5 px-2.5 rounded-t border border-b-0 border-zinc-800 bg-[#0E0E14]..."
+-                                       fdprocessedid="gear0n"
+                                      >
+                                      <div className="flex items...">
+                                        <button
+                                          type="button"
+                                          onClick={function toggleExplode}
+                                          className="h-7 px-2.5 rounded text-[11px] font-medium inline-flex items-cent..."
+-                                         fdprocessedid="9fvx9na"
+                                        >
+                                        <button
+                                          type="button"
+                                          onClick={function triggerInteractivePulse}
+                                          className="h-7 px-2.5 rounded bg-[#15151E] hover:bg-zinc-800 text-[11px] fon..."
+-                                         fdprocessedid="nywevm"
+                                        >
+                                        <button
+                                          type="button"
+                                          onClick={function toggleCameraPreset}
+                                          className="h-7 px-2.5 rounded bg-[#15151E] hover:bg-zinc-800 text-[11px] fon..."
+-                                         fdprocessedid="pqcgo"
+                                        >
+                              <div>
+                              <h3>
+                              <p>
+                              <div>
+                              <div className="mt-7 flex ...">
+                                <MagneticWrap strength={0.25}>
+                                  <div ref={{current:null}} className="inline-blo...">
+                                    <button
+                                      type="button"
+                                      data-cursor="Demo"
+                                      onClick={function onClick}
+                                      className="h-10 px-5 rounded-md bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-..."
+-                                     fdprocessedid="c5x5wh"
+                                    >
+                                <MagneticWrap strength={0.22}>
+                                  <div ref={{current:null}} className="inline-blo...">
+                                    <button
+                                      type="button"
+                                      data-cursor="Code"
+                                      onClick={function onClick}
+                                      className="h-10 px-5 rounded-md border border-zinc-800 bg-[#121217] hover:bg-zin..."
+-                                     fdprocessedid="vh8qy"
+                                    >
+                            <article className="project-mo...">
+                              <div className="project-ar...">
+                                <ThreeProjectShowcase variant="fullstack-..." projectIndex="03" techStack={[...]} ...>
+                                  <div onClick={function onClick} className="relative h...">
+                                    <div>
+                                    <div>
+                                    <button
+                                      type="button"
+                                      onClick={function onClick}
+                                      aria-label="Open full project details modal"
+                                      className="absolute top-3.5 right-3.5 z-10 h-7 px-2.5 rounded-md border border-z..."
+-                                     fdprocessedid="07h66"
+                                    >
+                                    <div className="absolute b...">
+                                      <button
+                                        type="button"
+                                        onClick={function onClick}
+                                        className="h-5 px-2.5 rounded-t border border-b-0 border-zinc-800 bg-[#0E0E14]..."
+-                                       fdprocessedid="5y4npr"
+                                      >
+                                      <div className="flex items...">
+                                        <button
+                                          type="button"
+                                          onClick={function toggleExplode}
+                                          className="h-7 px-2.5 rounded text-[11px] font-medium inline-flex items-cent..."
+-                                         fdprocessedid="hxdya"
+                                        >
+                                        <button
+                                          type="button"
+                                          onClick={function triggerInteractivePulse}
+                                          className="h-7 px-2.5 rounded bg-[#15151E] hover:bg-zinc-800 text-[11px] fon..."
+-                                         fdprocessedid="fazsp"
+                                        >
+                                        <button
+                                          type="button"
+                                          onClick={function toggleCameraPreset}
+                                          className="h-7 px-2.5 rounded bg-[#15151E] hover:bg-zinc-800 text-[11px] fon..."
+-                                         fdprocessedid="ar6k7i"
+                                        >
+                              <div>
+                              <h3>
+                              <p>
+                              <div>
+                              <div className="mt-7 flex ...">
+                                <MagneticWrap strength={0.25}>
+                                  <div ref={{current:null}} className="inline-blo...">
+                                    <button
+                                      type="button"
+                                      data-cursor="Demo"
+                                      onClick={function onClick}
+                                      className="h-10 px-5 rounded-md bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-..."
+-                                     fdprocessedid="j9tjek"
+                                    >
+                                <MagneticWrap strength={0.22}>
+                                  <div ref={{current:null}} className="inline-blo...">
+                                    <button
+                                      type="button"
+                                      data-cursor="Code"
+                                      onClick={function onClick}
+                                      className="h-10 px-5 rounded-md border border-zinc-800 bg-[#121217] hover:bg-zin..."
+-                                     fdprocessedid="bgqwj"
+                                    >
+                        ...
+                          <div className="mx-auto ma...">
+                            ...
+                              <div className="flex flex-...">
+                                <div>
+                                <div className="chapter-re...">
+                                  <div className="flex flex-...">
+                                    <button
+                                      type="button"
+                                      onClick={function onClick}
+                                      className="h-8 px-3 rounded-md font-[family-name:var(--font-mono)] tabular-nums ..."
+-                                     fdprocessedid="i0uwf9"
+                                    >
+                                    <button
+                                      type="button"
+                                      onClick={function onClick}
+                                      className="h-8 px-3 rounded-md font-[family-name:var(--font-mono)] tabular-nums ..."
+-                                     fdprocessedid="xoip9"
+                                    >
+                                    <button
+                                      type="button"
+                                      onClick={function onClick}
+                                      className="h-8 px-3 rounded-md font-[family-name:var(--font-mono)] tabular-nums ..."
+-                                     fdprocessedid="rzbv89"
+                                    >
+                                    <button
+                                      type="button"
+                                      onClick={function onClick}
+                                      className="h-8 px-3 rounded-md font-[family-name:var(--font-mono)] tabular-nums ..."
+-                                     fdprocessedid="kzzb0t"
+                                    >
+                            <div ref={{current:null}} className="relative m...">
+                              <div>
+                              <div>
+                              <div className="space-y-14...">
+                                <div id="journey-no..." className="relative g...">
+                                  <button
+                                    type="button"
+                                    aria-label="Toggle Stage 01"
+                                    onClick={function onClick}
+                                    className="journey-node-dot absolute -left-[26px] md:left-1/2 top-6 h-4 w-4 rounde..."
+-                                   fdprocessedid="7ulfx"
+                                  >
+                                  ...
+                                <div id="journey-no..." className="relative g...">
+                                  <button
+                                    type="button"
+                                    aria-label="Toggle Stage 02"
+                                    onClick={function onClick}
+                                    className="journey-node-dot absolute -left-[26px] md:left-1/2 top-6 h-4 w-4 rounde..."
+-                                   fdprocessedid="il9o3k"
+                                  >
+                                  ...
+                                <div id="journey-no..." className="relative g...">
+                                  <button
+                                    type="button"
+                                    aria-label="Toggle Stage 03"
+                                    onClick={function onClick}
+                                    className="journey-node-dot absolute -left-[26px] md:left-1/2 top-6 h-4 w-4 rounde..."
+-                                   fdprocessedid="yp26ii"
+                                  >
+                                  ...
+                                <div id="journey-no..." className="relative g...">
+                                  <button
+                                    type="button"
+                                    aria-label="Toggle Stage 04"
+                                    onClick={function onClick}
+                                    className="journey-node-dot absolute -left-[26px] md:left-1/2 top-6 h-4 w-4 rounde..."
+-                                   fdprocessedid="wtnjgq"
+                                  >
+                                  ...
+                      <ContactChapter>
+                        <footer id="contact" ref={{current:null}} aria-label="Chapter 06..." className="relative p...">
+                          <div className="mx-auto ma...">
+                            <div>
+                            <h2>
+                            <p>
+                            <div className="contact-re...">
+                              <MagneticWrap>
+                              <MagneticWrap strength={0.24}>
+                                <div ref={{current:null}} className="inline-blo...">
+                                  <button
+                                    type="button"
+                                    data-cursor="Compose"
+                                    onClick={function onClick}
+                                    aria-expanded={false}
+                                    className="h-12 px-6 rounded-md border border-zinc-800 bg-[#111115] hover:bg-zinc-..."
+-                                   fdprocessedid="qsd974d"
+                                  >
+                            <div className="contact-re...">
+                              <TiltCard maxTilt={5} cursorLabel="Copy" className="rounded-xl...">
+                                <div ref={{current:null}} data-cursor="Copy" className="relative o...">
+                                  <div>
+                                  <div
+                                    onClick={function handleCopyEmail}
+                                    role="button"
+                                    tabIndex={0}
+                                    onKeyDown={function onKeyDown}
+                                    className="p-6 h-full flex flex-col justify-between gap-5 cursor-pointer"
+-                                   fdprocessedid="hme1zc"
+                                  >
+                              ...
+                            <div className="mt-16 pt-8...">
+                              <p>
+                              <button
+                                type="button"
+                                data-cursor="Top"
+                                onClick={function onClick}
+                                className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-[#F4F4F5] transit..."
+-                               fdprocessedid="kd4dqa"
+                              >
+          ...
+        ...
+
+
+
+    at button (<anonymous>:null:null)
+    at HomePage (app/page.tsx:24:7)
+
+## Code Frame
+  22 |         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+  23 |       />
+> 24 |       <PortfolioExperience />
+     |       ^
+  25 |     </>
+  26 |   );
+  27 | }
+
+Next.js version: 15.5.29 (Webpack)

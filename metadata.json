@@ -1,0 +1,6 @@
+{
+  "name": "Interactive Scrollytelling Portfolio",
+  "description": "A modern scroll-based storytelling portfolio for a Junior Front-end Developer crafted with Next.js, TypeScript, Tailwind CSS, and GSAP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
